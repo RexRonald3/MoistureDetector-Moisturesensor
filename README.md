@@ -1,0 +1,1 @@
+using moisture sensor the moisture level of the soil is indicated with 3 light with the first light glowing when the detected moisture level range is below 200. the second light glowing when the moisture range is between 200 and 700.the last light glowing when the moisture level is above 700 which can detect a maximum value of 1023, 
