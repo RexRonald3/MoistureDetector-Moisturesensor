@@ -1,0 +1,36 @@
+#define MoistureSensor A0
+#define light1 4
+#define light2 3
+#define light3 2
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(MoistureSensor, INPUT);
+  pinMode(light1, OUTPUT);
+  pinMode(light2, OUTPUT);
+  pinMode(light3, OUTPUT);
+  
+}
+void loop()
+{
+  int a =analogRead(MoistureSensor);  
+  Serial.println(a);
+  if(a<=200)
+  {
+    digitalWrite(light1,HIGH);
+    digitalWrite(light2,LOW);
+    digitalWrite(light3,LOW);
+  }
+  else if(a<=700)
+  {
+    digitalWrite(light2,HIGH);
+    digitalWrite(light1,LOW);
+    digitalWrite(light3,LOW);
+  }
+  else
+  {
+    digitalWrite(light3,HIGH);
+    digitalWrite(light1,LOW);
+    digitalWrite(light2,LOW);
+  }
+}
